@@ -1,0 +1,141 @@
+<html>
+    
+    <head>
+        <script>https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.3/gsap.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomEase3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrambleTextPlugin3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomBounce3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CustomWiggle3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/InertiaPlugin.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/Draggable3.min.js</script>
+        <script>https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/EasePack3.min.js</script>
+        <script>https://codepen.io/GreenSock/pen/JGaKdQ</script>
+
+
+
+    </head>
+    
+    <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+
+            <circle id="path-1" cx="409.6" cy="409.6" r="409.6"/>
+
+            <linearGradient id="nighttime-gradient" x1="50%" y1="0%" y2="100%">
+                <stop stop-color="#060414" offset="0%"/>
+                <stop stop-color="#416584" offset="100%"/>
+            </linearGradient>
+
+            <linearGradient id="daytime-gradient" x1="50%" y1="0%" y2="100%">
+                <stop stop-color="#8CE7FF" offset="0%"/>
+                <stop stop-color="#A2F2FF" offset="100%"/>
+            </linearGradient>
+
+            <path id="path-6" d="M0 283L242 0l230 283z"/>
+
+            <path id="path-8" d="M0 335L214.2 0 418 335z"/>
+
+            <circle id="path-12" cx="511.6" cy="511.6" r="409.6"/>
+
+        </defs>
+
+        <g fill="none" fill-rule="evenodd">
+
+            <g id="Landscape" transform="translate(102 102)">
+
+                <mask id="mask-2" fill="#fff">
+                    <use xlink:href="#path-1"/>
+                </mask>
+
+                <use id="Container" fill="#D8D8D8" xlink:href="#path-1"/>
+
+                <path id="Day-Time" fill="url(#daytime-gradient)" d="M-20-20h860v860H-20z" mask="url(#mask-2)"/>
+
+                <g id="stars" fill="#FFF" fill-rule="nonzero" opacity="0">
+                    <path id="star-one" stroke="#FFF" d="M104.3 272.07l-7.67.48-.07-1 8-.5-5.36-6.7.78-.6 5.4 6.73 5.8-8.7.83.55-5.7 8.6 6.3-.38.06 1-6.1.38 5.45 6.8-.8.63-5.73-7.2-5.44 8.17-.82-.56 5.14-7.7zm.7-1.05l-.45.03.24.3.2-.33zm1.03.28l-.46.7.97-.07-.5-.63zm-1.72.77l1.05-.06.13.2.12-.2h-.26l-.53-.63-.5.72zm2-1.13l-.5.04-.4-.5-.36.54.77-.04.26.32.24-.36z" mask="url(#mask-2)" transform="rotate(30 104.594 271.05)"/>
+                    <path id="star-two" stroke="#FFF" d="M320.3 214.07l-7.67.48-.07-1 8-.5-5.36-6.7.78-.6 5.4 6.73 5.8-8.7.83.55-5.7 8.6 6.3-.38.06 1-6.1.38 5.45 6.8-.8.63-5.73-7.2-5.44 8.17-.82-.56 5.14-7.7zm.7-1.05l-.45.03.24.3.2-.33zm1.03.28l-.46.7.97-.07-.5-.63zm-1.72.77l1.05-.06.13.2.12-.2h-.26l-.53-.63-.5.72zm2-1.13l-.5.04-.4-.5-.36.54.77-.04.26.32.24-.36z" mask="url(#mask-2)" transform="rotate(30 320.594 213.05)"/>
+                    <path id="star-three" stroke="#FFF" d="M462.72 337.02l-7.7.48-.05-1 8-.5-5.36-6.7.8-.6 5.4 6.73 5.8-8.7.85.55-5.75 8.6 6.3-.38.05 1-6.1.38 5.46 6.8-.8.63-5.73-7.15-5.43 8.16-.84-.56 5.13-7.7zm.7-1.05l-.46.03.24.3.22-.33zm1.02.28l-.47.7.97-.07-.5-.63zm-1.72.77l1-.06.13.16.12-.18-.25.02-.52-.66-.48.72zm1.95-1.13h-.5l-.4-.5-.35.54.76-.04.26.33.23-.36z" mask="url(#mask-2)"/>
+                    <path id="star-four" stroke="#FFF" d="M692.75 387.3l-7.7.48-.05-1 8-.5-5.36-6.7.78-.6 5.4 6.72 5.8-8.7.83.55-5.75 8.62 6.3-.4.06 1-6.08.4 5.44 6.8-.78.62-5.75-7.2-5.48 8.12-.83-.55 5.13-7.7zm.7-1.05l-.46.03.2.3.22-.33zm1.02.27l-.46.7 1-.06-.5-.64zm-1.72.78l1-.07.14.17.1-.18h-.27l-.53-.64-.47.72zm1.95-1.13l-.5.03-.4-.5-.35.55.76-.05.3.32.23-.35z" mask="url(#mask-2)" transform="rotate(60 693.03 386.277)"/>
+                </g>
+
+                <circle id="sun" cx="499" cy="481" r="127" fill="#FFF688" mask="url(#mask-2)"/>
+
+                <g mask="url(#mask-2)">
+
+                    <g id="mountains">
+                        <g id="mountain-one" transform="translate(68 323)">
+                            <mask id="mask-7" fill="#fff" >
+                                <use xlink:href="#path-6"/>
+                            </mask>
+                            <use fill="#DDE9EC" xlink:href="#path-6"/>
+                            <path id="snow" fill="#FFF" d="M137.5 82.8c24.7-18 59.2-18 103.4 0s76 15.8 95-6.8l-76-98L137 83z" mask="url(#mask-7)"/>
+                        </g>
+                        <g id="mountain-two" transform="translate(-27 271)">
+                            <mask id="mask-9" fill="#fff">
+                                <use xlink:href="#path-8"/>
+                            </mask>
+                            <use fill="#CEDDE0" xlink:href="#path-8"/>
+                            <path id="snow" fill="#FFF" d="M122 97.4c21.8-21.3 52.3-21.3 91.5 0 39 21.4 67.3 18.7 84.6-8L231-26 122 97.3z" mask="url(#mask-9)"/>
+                        </g>
+                    </g>
+
+                    <g id="hills">
+                        <path id="hill-one" fill="#B6D788" d="M336 663c23.3-88 72.7-132.4 148-133 75.3-.5 121.7 43.8 139 133H336z"/>
+                        <path id="hill-two" fill="#C5EA7D" d="M171 596c20.8-67.6 64.8-101.6 132-102 67.2-.4 108.5 33.6 124 102H171z"/>
+                        <path id="hill-three" fill="#D7F1A4" d="M-61 610c29.3-106 91-159.3 185.6-160 94.4-.7 152.7 52.7 174.4 160H-61z"/>
+                        <path id="hill-four" fill="#D7F1A4" transform="translate(480 465)" d="M0 160C29.3 54 91 .7 185.6 0 280-.7 338.3 52.7 360 160H0z"/>
+                    </g>
+
+                    <path id="sand" fill="#FEFFDA" d="M-49.8 615c63-39 84-46 218-46S290 572 424 580s167.2-19 271.2 0c69.3 12.7 135.3 5 198-23l-408 298h-266C-32.4 739.7-122 659.7-49.8 615z"/>
+
+                    <path id="water-2" fill="#65CFD2" fill-opacity="0" d="M9 634.6c-79.3-31.4-77-42.3 7-32.6 126 14.5 239 27.5 350 13s264 0 359 15c63.3 10 101.7.7 115-28L580 870H235L9 634.7z"/>
+
+                    <path id="water" fill="#65CFD2" d="M9 634.6c66.7-19.3 142-24.2 226-14.5 126 15 225 15 336 0 74-9 154-4 240 15L580 870H235L9 634.7z"/>
+
+                </g>
+
+                <path id="nighttime-overlay" fill="url(#nighttime-gradient)" fill-opacity=".5" d="M-20-20h860v860H-20z" style="mix-blend-mode:multiply" opacity="0" mask="url(#mask-2)"/>
+
+                <circle id="moon" cx="-85.5" cy="300.5" r="61.5" fill="#FFF" mask="url(#mask-2)" opacity=".9"/>
+
+                <path id="cloud" fill="#FFF" d="M522.6 164.7c-21.5 0-40 12.6-44.7 30h-1c-19 0-34 13-34 28.8v.7c0 16 15 28.8 34 28.8h174c19 0 34-13 34-28.8v-.7c0-15.5-15-28.3-33-28.8.2-2.7.4-5.3.4-8 0-30.7-29.5-55.7-66-55.7-26.4 0-50.2 13.5-60.4 34l-4-.3z" mask="url(#mask-2)"/>
+
+            </g>
+
+            <mask id="mask-13" fill="#fff">
+                <use xlink:href="#path-12"/>
+            </mask>
+
+            <g id="border">
+                <use id="border-one" stroke="#D6E1E2" stroke-width="50" xlink:href="#path-12"/>
+                <use stroke="#FFF" stroke-width="16" xlink:href="#path-12"/>
+            </g>
+
+        </g>
+
+    </svg>
+
+</div>" width="150" /></a>
+
+<script>
+
+        // Timeline Setups
+    var animation_water = new TimelineMax({
+        repeat: -1, 
+        yoyo: true
+    });
+
+    // Water Animation
+    animation_water
+        .to("#water", 2, {y: 12, morphSVG:"#water-2", ease:Linear.easeNone}, 0 , 0);
+
+</script>
+
+</body>
+
+</html>
+

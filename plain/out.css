@@ -1,0 +1,88 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-color: darkseagreen;
+    color: white;
+}
+
+section{
+    margin: 0;
+    padding: 0;
+}
+
+.menu:hover p{
+    background-color: aliceblue;
+    color: black;
+    font-size: 1.5em;
+    border-radius: 25%;
+}
+
+#navbar{
+    margin: 0;
+    padding: 0;
+    background-color: floralwhite;
+}
+
+nav{
+    background-color: antiquewhite;
+}
+
+.mbar{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: inline;
+    text-align: center;
+    padding-left: 12.5em;
+    
+}
+
+nav:hover{
+    background-color: whitesmoke;
+}
+
+a{
+    padding:0; 
+    text-decoration: none;
+    font-size: 1.5em;
+    text-shadow: 2px black;
+    text-align: center;
+    color: chocolate;
+}
+a:hover{
+    text-decoration:overline;
+    color: firebrick;
+    padding-right: -2em;
+}
+
+.menu2{
+    background-color: aqua;
+    border-radius: 48%;
+}
+
+.menu{
+    border-radius: 45%;
+    background-color: dodgerblue;
+}
+
+.menu2:hover{
+    border-radius: 28%;
+}
+
+.menu:hover p{
+    background-color: aliceblue;
+    color: black;
+    font-size: 1.5em;
+    border-radius: 25%;
+}
+
+p{
+    position: relative;
+    text-align: center;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+}
+
