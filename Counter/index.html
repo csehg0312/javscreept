@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Counting</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+    </head>
+    <body style="background-color:rgb(120, 128, 181);">
+
+        <script>
+            let count = 0;
+            let halmaz = [];
+
+            function increment() {
+                count++;
+                document.getElementById("counter").innerHTML = count;
+            }
+
+            function decrement(){
+                count--;
+                document.getElementById("counter").innerHTML = count;
+            }
+
+            function get_val() {
+                let inputValue = prompt("Please enter a value:");
+
+                if (inputValue != null && inputValue != "")  {
+                    alert("You entered: " + inputValue);
+                    return inputValue;
+                }
+                else {
+                    alert("You not entered a name! Save it with a name.");
+                }
+            }
+
+            function save(){
+                inVal = get_val();
+                push_to_dict(inVal, count);
+                alert("Saved!");
+                document.getElementById("counter").innerHTML = 0;
+                count=0;
+                console.log(halmaz);
+            }
+
+            function push_to_dict(k, v) {
+                halmaz.push({
+                    key: k,
+                    value: v
+                });
+            }
+
+            function appendTable() {
+                var keyV = get_val();
+                if (keyV != undefined) {
+                    var newRow = document.createElement("tr");
+                    var newCell = document.createElement("td");
+                    newCell.innerHTML = keyV;
+                    newRow.append(newCell, document.createElement("td").innerHTML = count);
+                    document.getElementById("saves").appendChild(newRow);
+                    document.getElementById("keyV");
+                    count = 0;
+                    document.getElementById("counter").innerHTML = 0;
+                }
+            }
+
+        </script>
+        
+        <div style="align-items: center; background-color: rgb(105, 135, 201)">
+
+            <h1>Counted: <span id="counter">0</span></h1>
+            <div style="display: grid; width: min-content;">
+                <button onclick="increment()", lang="en", style="padding: 15px;">Increment</button>
+                <button onclick="decrement()", lang="en", style="padding: 15px;"> Decrement</button>
+                <button onclick="appendTable()", lang="en",style="padding: 15px;"> Save </button>
+            </div>
+        </div>
+        <div style="display: grid; background-color: rgb(107, 186, 236)">
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+                <tbody id="saves">
+
+
+                </tbody>
+
+            </table>
+        </div>
+       
+
+    </body>
+</html>
